@@ -1477,7 +1477,7 @@ pre .javascript .function {
 .posts-expand .post-title {
   overflow-wrap: break-word;
   word-wrap: break-word;
-  text-align: left;
+  text-align: center;
   font-weight: 400;
 }
 .posts-expand .post-title-link {
@@ -1850,7 +1850,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffff0a;
+  background: #4b0444;
 }
 .links-of-blogroll {
   font-size: 13px;

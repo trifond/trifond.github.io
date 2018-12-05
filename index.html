@@ -342,7 +342,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://trifond.github.io/2018/12/05/relax_alarm-privacy-policy-zh/">
+    <link itemprop="mainEntityOfPage" href="http://trifond.github.io/2018/12/05/hexo-folder-ignore-case/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Trifond">
@@ -362,7 +362,192 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2018/12/05/relax_alarm-privacy-policy-zh/" class="post-title-link" itemprop="http://trifond.github.io/index.html">轻松闹钟 应用隐私政策</a>
+                <a href="/2018/12/05/hexo-folder-ignore-case/" class="post-title-link" itemprop="http://trifond.github.io/index.html">关于Hexo部署到Github后文件夹命名大小写引起的404问题解决方案</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2018-12-05 15:47:45 / 修改时间：15:49:59" itemprop="dateCreated datePublished" datetime="2018-12-05T15:47:45+08:00">2018-12-05</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing"><a href="/categories/Hexo/" itemprop="url" rel="index"><span itemprop="name">Hexo</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>使用Hexo撰写文章后仅使用几个简单命令即可轻松部署到Github上，有时候经常会出现文章部署后又修改了Tag或Categories，而恰好修改的内容涉及到英文字母大写改小写或小写改大写，譬如news改为News，字母N修改后确发现部署到Github上无法生效，而此时你若在本地预览确一切正常。</p>
+<p>由于在发布的文章中出现的Tag或Categories会对应在tag或categories页面中显示，因此当点击对应的Tag或Categories时会出现路径无法找到从而跳转到404页面。</p>
+<h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><p>这个现象的问题是由于git命令默认的配置中忽略了文件名的大小写，因此即便文件夹的大小写发生了变更，git也会表现出置之不理。</p>
+<h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><p>解决思路是先调整git的配置文件，让git执行时不要忽略大小写的修改，然后清空github.io项目中的所有文件，最后使用Hexo重新生成并部署。</p>
+<h3 id="解决步骤"><a href="#解决步骤" class="headerlink" title="解决步骤"></a>解决步骤</h3><ol>
+<li><p>进入到Hexo项目的文件夹中，比如Hexo项目文件夹名称为blog：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">`cd blog`</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>进入<code>.deploy_git</code>文件夹</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">`cd .deploy_git`</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>打开<code>.git</code>目录下的config文件并修改<code>ignorecase = true</code> 为 <code>ignorecase = false</code></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">vim .git/config</span><br><span class="line"></span><br><span class="line">[core]</span><br><span class="line">repositoryformatversion = 0</span><br><span class="line">filemode = true</span><br><span class="line">bare = false</span><br><span class="line">logallrefupdates = true</span><br><span class="line">ignorecase = true   ##修改true为false</span><br><span class="line">precomposeunicode = true</span><br><span class="line">…</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>文件打开后，输入i进入编辑模式，将光标移动到<code>ignorecase = true</code>，将<code>true</code>改为<code>false</code>后输入<code>:wq</code>。（冒号也是命令的一部分）</p>
+<ol start="4">
+<li><p>接下来删除 <code>.deploy_git</code>文件夹内的所有文件，并push到Github仓库，完成后你的github.io项目中没有任何文件。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git rm -rf *</span><br><span class="line">git commit -m ‘clean all file’</span><br><span class="line">git push</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>返回Hexo项目blog的根目录，重新生成文件并部署到Github上</p>
+</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd ..</span><br><span class="line">hexo clean</span><br><span class="line">hexo g -d</span><br></pre></td></tr></table></figure>
+<p>完成。</p>
+<p>你现在可以在浏览器中重新加载查看是否还会出现404页面了。</p>
+
+          
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+       
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://trifond.github.io/2018/12/05/relax-alarm-privacy-policy-zh/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Trifond">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="TRIFOND">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/2018/12/05/relax-alarm-privacy-policy-zh/" class="post-title-link" itemprop="http://trifond.github.io/index.html">轻松闹钟 应用隐私政策</a>
               
             
           </h1>
@@ -448,7 +633,7 @@
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/2018/12/05/relax_alarm-privacy-policy-zh/#more" rel="contents">
+              <a class="btn" href="/2018/12/05/relax-alarm-privacy-policy-zh/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -702,7 +887,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">2</span>
+                    <span class="site-state-item-count">3</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -717,7 +902,9 @@
                     
                       
                     
-                    <span class="site-state-item-count">1</span>
+                      
+                    
+                    <span class="site-state-item-count">2</span>
                     <span class="site-state-item-name">分类</span>
                   </a>
                 </div>
@@ -734,7 +921,11 @@
                     
                       
                     
-                    <span class="site-state-item-count">2</span>
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">4</span>
                     <span class="site-state-item-name">标签</span>
                   </a>
                 </div>

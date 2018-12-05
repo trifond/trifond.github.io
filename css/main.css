@@ -1202,7 +1202,7 @@ pre .javascript .function {
 .menu {
   margin-top: 20px;
   padding-left: 0;
-  text-align: center;
+  text-align: right;
 }
 .menu .menu-item {
   display: inline-block;
@@ -1850,7 +1850,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #6be5a2;
+  background: #666203;
 }
 .links-of-blogroll {
   font-size: 13px;

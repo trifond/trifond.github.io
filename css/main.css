@@ -1202,7 +1202,7 @@ pre .javascript .function {
 .menu {
   margin-top: 20px;
   padding-left: 0;
-  text-align: right;
+  text-align: center;
 }
 .menu .menu-item {
   display: inline-block;
@@ -1850,7 +1850,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ddff9c;
+  background: #ff9398;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2844,4 +2844,52 @@ hr {
     width: auto;
     text-align: center;
   }
+}
+.header {
+  background: #323232;
+}
+.brand {
+  color: #fff;
+}
+.brand:hover {
+  color: #e1e1e1;
+}
+.logo-line-before i,
+.logo-line-after i {
+  background: #fff;
+}
+.menu {
+  text-align: right;
+}
+.menu .menu-item a {
+  border-radius: 5px;
+  color: #fff;
+}
+.menu .menu-item-active a,
+.menu .menu-item a:hover,
+.menu .menu-item span.exturl:hover {
+  background: #e1e1e1;
+  color: #333;
+}
+.btn-bar {
+  background: #fff;
+}
+.post-body {
+  font-size: 15px;
+}
+.page-post-detail .post-title,
+.page-post-detail .post-meta {
+  text-align: left;
+}
+.posts-expand .post-tags a {
+  padding: 1px 8px;
+  border-radius: 5px;
+}
+.sidebar {
+  box-shadow: none;
+  background: #323232;
+}
+.site-author-name {
+  font-weight: bold;
+  font-size: 20px;
 }

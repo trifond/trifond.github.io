@@ -419,6 +419,10 @@
           
 
   
+    <div id="gitalk-container">
+    </div>
+    
+  
 
 
 
@@ -694,6 +698,32 @@
 
 
 
+
+
+  
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/gitalk@1.4.0/dist/gitalk.min.js"></script>
+
+  
+  
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1.4.0/dist/gitalk.css">
+
+  
+  
+  <script type="text/javascript" src="//cdn.jsdelivr.net/npm/js-md5@0.7.3/src/md5.min.js"></script>
+    
+   <script type="text/javascript">
+        var gitalk = new Gitalk({
+          clientID: '759141327921e05b213e',
+          clientSecret: '2b323fcf0ee21cdab24c65c0549427cf2b1c5c8d',
+          repo: 'trifond.github.io',
+          owner: 'trifond',
+          admin: ['trifond'],
+          id: md5(location.pathname),
+          distractionFreeMode: 'true'
+        })
+        gitalk.render('gitalk-container')           
+       </script>
 
   
 

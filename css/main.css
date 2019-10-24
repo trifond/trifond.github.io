@@ -1850,7 +1850,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ffe2ff;
+  background: #0eecff;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -2857,6 +2857,9 @@ hr {
 .logo-line-before i,
 .logo-line-after i {
   background: #fff;
+}
+.footer-inner {
+  text-align: center;
 }
 .menu {
   text-align: right;

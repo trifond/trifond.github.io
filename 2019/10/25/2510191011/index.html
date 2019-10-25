@@ -108,27 +108,25 @@
 
 
 
-  <meta name="description" content="使用Hexo撰写文章后仅使用几个简单命令即可轻松部署到Github上，有时候经常会出现文章部署后又修改了Tag或Categories，而恰好修改的内容涉及到英文字母大写改小写或小写改大写，譬如news改为News，字母N修改后确发现部署到Github上无法生效，而此时你若在本地预览确一切正常。 由于在发布的文章中出现的Tag或Categories会对应在tag或categories页面中显示，因此">
-<meta name="keywords" content="Hexo,Ignore case">
+  <meta name="description" content="把Hexo常用的命令方法备忘在此。">
+<meta name="keywords" content="Hexo">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hexo部署到Github后文件夹名大小写引起的问题">
-<meta property="og:url" content="http://trifond.github.io/2018/12/05/hexo-folder-ignore-case/index.html">
+<meta property="og:title" content="Hexo常用命令备忘录">
+<meta property="og:url" content="http://trifond.github.io/2019/10/25/2510191011/index.html">
 <meta property="og:site_name" content="TRIFOND">
-<meta property="og:description" content="使用Hexo撰写文章后仅使用几个简单命令即可轻松部署到Github上，有时候经常会出现文章部署后又修改了Tag或Categories，而恰好修改的内容涉及到英文字母大写改小写或小写改大写，譬如news改为News，字母N修改后确发现部署到Github上无法生效，而此时你若在本地预览确一切正常。 由于在发布的文章中出现的Tag或Categories会对应在tag或categories页面中显示，因此">
+<meta property="og:description" content="把Hexo常用的命令方法备忘在此。">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:image" content="http://trifond.github.io/2018/12/05/hexo-folder-ignore-case/20181205112235.png">
-<meta property="og:updated_time" content="2019-10-25T03:15:08.678Z">
+<meta property="og:updated_time" content="2019-10-25T03:15:21.888Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo部署到Github后文件夹名大小写引起的问题">
-<meta name="twitter:description" content="使用Hexo撰写文章后仅使用几个简单命令即可轻松部署到Github上，有时候经常会出现文章部署后又修改了Tag或Categories，而恰好修改的内容涉及到英文字母大写改小写或小写改大写，譬如news改为News，字母N修改后确发现部署到Github上无法生效，而此时你若在本地预览确一切正常。 由于在发布的文章中出现的Tag或Categories会对应在tag或categories页面中显示，因此">
-<meta name="twitter:image" content="http://trifond.github.io/2018/12/05/hexo-folder-ignore-case/20181205112235.png">
+<meta name="twitter:title" content="Hexo常用命令备忘录">
+<meta name="twitter:description" content="把Hexo常用的命令方法备忘在此。">
 
 
 
 
 
 
-  <link rel="canonical" href="http://trifond.github.io/2018/12/05/hexo-folder-ignore-case/">
+  <link rel="canonical" href="http://trifond.github.io/2019/10/25/2510191011/">
 
 
 
@@ -138,7 +136,7 @@
   };
 </script>
 
-  <title>Hexo部署到Github后文件夹名大小写引起的问题 | TRIFOND</title>
+  <title>Hexo常用命令备忘录 | TRIFOND</title>
   
 
 
@@ -348,7 +346,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://trifond.github.io/2018/12/05/hexo-folder-ignore-case/">
+    <link itemprop="mainEntityOfPage" href="http://trifond.github.io/2019/10/25/2510191011/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Trifond">
@@ -365,7 +363,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hexo部署到Github后文件夹名大小写引起的问题
+          <h1 class="post-title" itemprop="name headline">Hexo常用命令备忘录
               
             
           </h1>
@@ -390,7 +388,7 @@
                 
               
 
-              <time title="创建时间：2018-12-05 15:47:45" itemprop="dateCreated datePublished" datetime="2018-12-05T15:47:45+08:00">2018-12-05</time>
+              <time title="创建时间：2019-10-25 10:11:07" itemprop="dateCreated datePublished" datetime="2019-10-25T10:11:07+08:00">2019-10-25</time>
             
 
             
@@ -442,21 +440,47 @@
       
 
       
-        <p>使用Hexo撰写文章后仅使用几个简单命令即可轻松部署到Github上，有时候经常会出现文章部署后又修改了Tag或Categories，而恰好修改的内容涉及到英文字母大写改小写或小写改大写，譬如news改为News，字母N修改后确发现部署到Github上无法生效，而此时你若在本地预览确一切正常。</p>
-<p>由于在发布的文章中出现的Tag或Categories会对应在tag或categories页面中显示，因此当点击对应的Tag或Categories时会出现路径无法找到从而跳转到404页面。</p>
+        <p>把Hexo常用的命令方法备忘在此。</p>
 <a id="more"></a>
-<p><img src="20181205112235.png" alt="Github 404 Page"></p>
-<h3 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h3><p>这个现象的问题是由于git命令默认的配置中忽略了文件名的大小写，因此即便文件夹的大小写发生了变更，git也会表现出置之不理。</p>
-<h3 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h3><p>解决思路是先调整git的配置文件，让git执行时不要忽略大小写的修改，然后清空github.io项目中的所有文件，最后使用Hexo重新生成并部署。</p>
-<h3 id="解决步骤"><a href="#解决步骤" class="headerlink" title="解决步骤"></a>解决步骤</h3><p>进入到Hexo项目的文件夹中，比如Hexo项目文件夹名称为blog：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd blog</span><br></pre></td></tr></table></figure></p>
-<p>进入<code>.deploy_git</code>文件夹 （<code>.deploy_git</code>是隐藏文件夹，如果你看不到，可以使用<code>ls -a</code>命令来查看，这一步可以省略）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd .deploy_git</span><br></pre></td></tr></table></figure></p>
-<p>打开<code>.git</code>目录下的config文件并修改<code>ignorecase = true</code> 为 <code>ignorecase = false</code><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">vim .git/config</span><br><span class="line"></span><br><span class="line">[core]</span><br><span class="line">repositoryformatversion = 0</span><br><span class="line">filemode = true</span><br><span class="line">bare = false</span><br><span class="line">logallrefupdates = true</span><br><span class="line">ignorecase = true   ##修改true为false</span><br><span class="line">precomposeunicode = true</span><br><span class="line">…</span><br></pre></td></tr></table></figure></p>
-<p>文件打开后，输入i进入编辑模式，将光标移动到<code>ignorecase = true</code>，将<code>true</code>改为<code>false</code>后输入<code>:wq</code>。（冒号也是命令的一部分）</p>
-<p>接下来删除 <code>.deploy_git</code>文件夹内的所有文件，并push到Github仓库，完成后你的github.io项目中没有任何文件。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git rm -rf *</span><br><span class="line">git commit -m ‘clean all file’</span><br><span class="line">git push</span><br></pre></td></tr></table></figure></p>
-<p>返回Hexo项目blog的根目录，重新生成文件并部署到Github上</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd ..</span><br><span class="line">hexo clean</span><br><span class="line">hexo g -d</span><br></pre></td></tr></table></figure>
-<p>完成。</p>
-<p>你现在可以在浏览器中重新加载查看是否还会出现404页面了。</p>
+<h4 id="创建新文章"><a href="#创建新文章" class="headerlink" title="创建新文章"></a>创建新文章</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new [layout] &lt;title&gt;</span><br></pre></td></tr></table></figure>
+<p>新建一篇文章。如果没有设置 layout 的话，默认使用 _config.yml 中的 default_layout 参数代替。如果标题包含空格的话，请使用引号括起来。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new &quot;New article&quot;</span><br></pre></td></tr></table></figure>
+<p>可简写为</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo n &quot;New article&quot;</span><br></pre></td></tr></table></figure>
+<p>可用的参数：</p>
+<p>-p, –path：自定义新文章的路径。<br>-r, –replace：如果存在同名文章会将其替换。<br>-s, –slug：文章的 Slug，作为新文章的文件名和发布后的URL。</p>
+<p>默认情况下，Hexo 会使用文章的标题来决定文章文件的路径。对于独立页面来说，Hexo 会创建一个以标题为名字的目录，并在目录中放置一个index.md文件。你可以使用 –path 参数来覆盖上述行为、自行决定文件的目录：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new page --path about/me &quot;New article&quot;</span><br></pre></td></tr></table></figure>
+<p>以上命令会创建一个 source/about/me.md 文件，同时 Front Matter 中的 title 为 “About me”。</p>
+<p>注意！title 是必须指定的！如果你这么做并不能达到你的目的：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new page --path about/me</span><br></pre></td></tr></table></figure>
+<p>此时 Hexo 会创建 source/_posts/about/me.md，同时 me.md 的 Front Matter 中的 title 为 “page”。这是因为在上述命令中，hexo-cli 将 page 视为指定文章的标题、并采用默认的 layout。</p>
+<p>可以为文章指定一个文件名，并且作为发布后的URL。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo n &quot;New article&quot; -s filename</span><br></pre></td></tr></table></figure>
+<h4 id="生成静态文件"><a href="#生成静态文件" class="headerlink" title="生成静态文件"></a>生成静态文件</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<p>可用的参数：</p>
+<p>-d, –deploy：文件生成后立即部署网站。<br>-w, –watch：监视文件变动。<br>-b, –bail：生成过程中如果发生任何未处理的异常则抛出异常。<br>-f, –force：强制重新生成文件。</p>
+<p>Hexo 引入了差分机制，如果 public 目录存在，那么 hexo g 只会重新生成改动的文件。使用该参数的效果接近 hexo clean &amp;&amp; hexo generate。<br>-c, –concurrency：最大同时生成文件的数量，默认无限制。</p>
+<p>可以简写为</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g</span><br></pre></td></tr></table></figure>
+<h4 id="发表草稿"><a href="#发表草稿" class="headerlink" title="发表草稿"></a>发表草稿</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo publish [layout] &lt;filename&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="启动服务器"><a href="#启动服务器" class="headerlink" title="启动服务器"></a>启动服务器</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>默认情况下，访问网址为： <a href="http://localhost:4000/。" target="_blank" rel="noopener">http://localhost:4000/。</a></p>
+<p>可用的参数：</p>
+<p>-p, –port：重设端口。<br>-s, –static：只使用静态文件。<br>-l, –log：启动日记记录，使用覆盖记录格式。</p>
+<h4 id="部署网站"><a href="#部署网站" class="headerlink" title="部署网站"></a>部署网站</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>可用的参数：</p>
+<p>-g, –generate：部署之前预先生成静态文件。</p>
+<p>可以简写为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo d</span><br></pre></td></tr></table></figure>
+<h4 id="清除缓存"><a href="#清除缓存" class="headerlink" title="清除缓存"></a>清除缓存</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br></pre></td></tr></table></figure>
+<p>清除缓存文件 (db.json) 和已生成的静态文件 (public)。</p>
+<p>在某些情况（尤其是更换主题后），如果发现对站点的更改无论如何也不生效，那么运行该命令。</p>
+<h4 id="查看网站资料"><a href="#查看网站资料" class="headerlink" title="查看网站资料"></a>查看网站资料</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo list &lt;type&gt;</span><br></pre></td></tr></table></figure>
+<h4 id="查看Hexo版本"><a href="#查看Hexo版本" class="headerlink" title="查看Hexo版本"></a>查看Hexo版本</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo version</span><br></pre></td></tr></table></figure>
+<h4 id="显示草稿"><a href="#显示草稿" class="headerlink" title="显示草稿"></a>显示草稿</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo --draft</span><br></pre></td></tr></table></figure>
+<p>显示 source/_drafts 文件夹中的草稿文章。</p>
+<h6 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h6><p><a href="https://hexo.io/zh-cn/" target="_blank" rel="noopener">Hexo官网</a><br><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">Hexo安装</a><br><a href="https://hexo.io/zh-cn/docs/setup" target="_blank" rel="noopener">Hexo建站</a><br><a href="https://hexo.io/zh-cn/docs/configuration" target="_blank" rel="noopener">Hexo配置</a><br><a href="https://hexo.io/zh-cn/docs/commands.html" target="_blank" rel="noopener">Hexo指令</a></p>
 
       
     </div>
@@ -482,8 +506,6 @@
           
             <a href="/tags/Hexo/" rel="tag">Hexo</a>
           
-            <a href="/tags/Ignore-case/" rel="tag">Ignore case</a>
-          
         </div>
       
 
@@ -495,8 +517,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/12/05/relax-alarm-privacy-policy-zh/" rel="next" title="轻松闹钟 应用隐私政策">
-                <i class="fa fa-chevron-left"></i> 轻松闹钟 应用隐私政策
+              <a href="/2019/10/17/remind-timer-privacy-policy-zh/" rel="next" title="计时提醒 应用隐私政策">
+                <i class="fa fa-chevron-left"></i> 计时提醒 应用隐私政策
               </a>
             
           </div>
@@ -504,10 +526,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2018/12/06/relax-alarm-support-zh/" rel="prev" title="轻松闹钟技术支持">
-                轻松闹钟技术支持 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -672,7 +690,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#原因"><span class="nav-number">1.</span> <span class="nav-text">原因</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解决方案"><span class="nav-number">2.</span> <span class="nav-text">解决方案</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解决步骤"><span class="nav-number">3.</span> <span class="nav-text">解决步骤</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#创建新文章"><span class="nav-number">1.</span> <span class="nav-text">创建新文章</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#生成静态文件"><span class="nav-number">2.</span> <span class="nav-text">生成静态文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#发表草稿"><span class="nav-number">3.</span> <span class="nav-text">发表草稿</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#启动服务器"><span class="nav-number">4.</span> <span class="nav-text">启动服务器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#部署网站"><span class="nav-number">5.</span> <span class="nav-text">部署网站</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#清除缓存"><span class="nav-number">6.</span> <span class="nav-text">清除缓存</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查看网站资料"><span class="nav-number">7.</span> <span class="nav-text">查看网站资料</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查看Hexo版本"><span class="nav-number">8.</span> <span class="nav-text">查看Hexo版本</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#显示草稿"><span class="nav-number">9.</span> <span class="nav-text">显示草稿</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#参考文献"><span class="nav-number">9.0.1.</span> <span class="nav-text">参考文献</span></a></li></ol></li></ol></div>
             
 
           </div>

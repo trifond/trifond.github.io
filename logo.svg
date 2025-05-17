@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="180px" height="180px" viewBox="0 0 180 180" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.3 (57544) - http://www.bohemiancoding.com/sketch -->
+    <title>apple-touch-icon-next</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-225.000000, -40.000000)">
+            <g id="apple-touch-icon-next" transform="translate(225.000000, 40.000000)">
+                <rect id="Rectangle" fill="#323232" x="0" y="0" width="180" height="180" rx="45"></rect>
+                <polygon id="T" fill="#FFFFFF" points="142.517329 67.86 108.857329 67.86 93.2316943 134.46 59.2116943 134.46 74.8373291 67.86 43.8773291 67.86 49.2407227 45 147.880723 45"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

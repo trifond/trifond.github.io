@@ -1,16 +1,10 @@
 <!doctype html>
 <html>
 <head>
-<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
-
-<link rel="icon" type="image/svg+xml" href="/logo.svg" >
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-
-<link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'><style type='text/css'>html {overflow-x: initial !important;}</style>
+<style type='text/css'  id="style-base">:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
 .mac-os-11 { --title-bar-height: 28px; }
-html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, "Segoe UI Emoji", "SF Pro", sans-serif; -webkit-font-smoothing: antialiased; }
 h1, h2, h3, h4, h5 { white-space: pre-wrap; }
 body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.428571; overflow-x: hidden; background: inherit; }
 iframe { margin: auto; }
@@ -19,7 +13,7 @@ a:active, a:hover { outline: 0px; }
 .in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
 #write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
 #write.first-line-indent p { text-indent: 2em; }
-#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li p, #write.first-line-indent p *, #write.first-line-indent svg * { text-indent: 0px; }
 #write.first-line-indent li { margin-left: 2em; }
 .for-image #write { padding-left: 8px; padding-right: 8px; }
 body.typora-export { padding-left: 30px; padding-right: 30px; }
@@ -36,10 +30,12 @@ button, input, select, textarea { color: inherit; font-style: inherit; font-vari
 input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
 *, ::after, ::before { box-sizing: border-box; }
 #write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; position: relative; }
-#write svg h1, #write svg h2, #write svg h3, #write svg h4, #write svg h5, #write svg h6, #write svg p { position: static; }
+#write svg h1, #write svg h2, #write svg h3, #write svg h4, #write svg h5, #write svg h6, #write svg p { position: static; white-space: nowrap; overflow: visible; }
+foreignObject { overflow: visible; }
 p { line-height: inherit; }
 h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
 p { orphans: 4; }
+li p { orphans: 1; }
 h1 { font-size: 2rem; }
 h2 { font-size: 1.8rem; }
 h3 { font-size: 1.6rem; }
@@ -224,8 +220,9 @@ mjx-container { break-inside: avoid; }
 .md-alert-text svg { fill: currentcolor; position: relative; top: 0.125em; margin-right: 1ch; overflow: visible; }
 .md-alert-text-container::after { content: attr(data-text); text-transform: capitalize; pointer-events: none; margin-right: 1ch; }
 
-
-:root {
+</style>
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,700,400&amp;subset=latin,latin-ext' type='text/css' />
+<style type='text/css'  id="style-theme_css">:root {
     --side-bar-bg-color: #fafafa;
     --control-text-color: #777;
 }
@@ -242,7 +239,7 @@ mjx-container { break-inside: avoid; }
 }
 
 body {
-    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', sans-serif;
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, 'Segoe UI Emoji', 'SF Pro', sans-serif;
     color: rgb(51, 51, 51);
     line-height: 1.6;
 }
@@ -612,12 +609,13 @@ header, .context-menu, .megamenu-content, footer{
     background-color: #f5f8fa;
     background-image: linear-gradient( 180deg , hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0)); 
 }
+</style>
+<style type='text/css'  id="style-lp">ol, ul {padding-left: 40px}</style>
+<style type='text/css'  id="style-mac-print"> @media print { @page {margin: 0 0 0 0;} body.typora-export {padding-left: 0; padding-right: 0;} #write {padding:0;}}</style>
 
-
- @media print { @page {margin: 0 0 0 0;} body.typora-export {padding-left: 0; padding-right: 0;} #write {padding:0;}}
-</style><title>Alarmix 最终用户使用协议</title>
+<title>eula_zh</title>
 </head>
 <body class='typora-export'><div class='typora-export-content'>
-<div id='write'  class=''><h4 id='alarmix'><span>Alarmix</span></h4><h2 id='最终用户使用协议'><span>最终用户使用协议</span></h2><p><span>尊敬的用户，感谢您选择使用 </span><strong><span>Alarmix</span></strong><span> 应用。为明确双方权利与义务，保障您的合法权益，现制定本服务协议。请您在使用本应用前，仔细阅读以下条款内容，您继续使用本应用即视为已充分理解并同意接受本协议的全部约定。</span></p><p>&nbsp;</p><h4 id='一服务内容'><span>一、服务内容</span></h4><p><span>用户通过 AppStore 购买并下载应用，用户给于应用正常运行所需要的系统功能授权后，可以使用应用提供的闹钟功能服务。用户可以通过内置的提示音、报时语音及音乐片段组合成为闹铃提醒声音，用户可最多设定 30 个闹钟。本应用将持续优化服务体验，根据实际情况不定期新增功能，相关调整将通过应用内公告等方式向用户告知。</span></p><p>&nbsp;</p><h4 id='二用户责任与义务'><span>二、用户责任与义务</span></h4><h5 id='一合规使用要求'><span>（一）合规使用要求</span></h5><p><span>用户在使用本应用过程中，应遵守相关法律法规及本协议约定。</span></p><h5 id='二违规处理措施'><span>（二）违规处理措施</span></h5><p><span>若发现用户存在违规行为或上传违规内容，本应用有权采取以下措施：</span></p><ol start='' ><li><p><span>向用户发送书面整改通知，并要求用户限期删除违规内容，必要时提供技术协助；</span></p></li><li><p><span>若违规情节严重，本应用有权视情况采取暂停或终止用户服务等处置措施。</span></p></li></ol><p>&nbsp;</p><h4 id='三服务变更'><span>三、服务变更</span></h4><p><span>为提升服务质量，本应用可能进行以下调整：</span></p><ol start='' ><li><p><span>对应用程序的功能模块进行升级或优化。</span></p></li><li><p><span>对服务流程进行简化与优化，如调整闹钟设置界面的交互逻辑，提升用户操作便捷性。</span></p></li><li><p><span>适时新增服务功能。</span></p></li><li><p><span>对用户界面持续进行优化调整以提升用户体验。</span></p></li></ol><p>&nbsp;</p><h4 id='四法律条款'><span>四、法律条款</span></h4><h5 id='一协议适用与争议解决'><span>（一）协议适用与争议解决</span></h5><ol start='' ><li><p><span>本协议适用用户所在国家 / 地区的相关法律法规；</span></p></li><li><p><span>若双方就本协议产生争议，应首先通过友好协商解决；协商不成的，任何一方均可依法向有管辖权的人民法院提起诉讼。</span></p></li></ol><h5 id='二与苹果公司的关系'><span>（二）与苹果公司的关系</span></h5><p><span>根据苹果应用商店相关规定：</span></p><ol start='' ><li><p><span>苹果公司并非本协议的责任主体；</span></p></li><li><p><span>若用户出现严重违约行为，苹果公司有权依据其相关规则采取必要措施。</span></p></li></ol><p>&nbsp;</p><h4 id='五联系与反馈'><span>五、联系与反馈</span></h4><p><span>用户如对本应用或本协议有任何疑问、意见或建议，可通过以下方式联系我们：</span></p><ol start='' ><li><p><span>客服支持：用户可通过电子邮箱 </span><a href='mailto:trifond@outlook.com'><span>trifond@outlook.com</span></a><span> 提交咨询或反馈。</span></p></li><li><p><span>紧急事务处理：如遇需优先处理的紧急事项，用户可在邮件主题行标注【紧急】标识，我们将优先安排专人跟进处理。</span></p></li></ol><p>&nbsp;</p><h4 id='六其他条款'><span>六、其他条款</span></h4><ol start='' ><li><p><span>用户继续使用本应用即视为已接受本协议全部内容；</span></p></li><li><p><span>本协议内容如有变更，将通过应用更新提示等方式通知用户。用户在本协议变更后继续使用本应用的，视为已接受变更后的协议内容。</span></p></li></ol><p>&nbsp;</p><p><span>再次感谢您的信任与支持！如有任何问题，欢迎随时与我们联系。</span></p><p>&nbsp;</p><p><span>更新时间：2025 年 6 月</span></p></div></div>
+<div id='write'  class=''><h4 id='alarmix'><span>Alarmix</span></h4><h2 id='最终用户使用协议'><span>最终用户使用协议</span></h2><p><span>尊敬的用户，感谢您选择使用 </span><strong><span>Alarmix</span></strong><span> 应用。为明确双方权利与义务，保障您的合法权益，现制定本服务协议。请您在使用本应用前，仔细阅读以下条款内容，您继续使用本应用即视为已充分理解并同意接受本协议的全部约定。</span></p><p>&nbsp;</p><h4 id='一服务内容'><span>一、服务内容</span></h4><p><span>用户通过 AppStore 购买并下载应用，用户给于应用正常运行所需要的系统功能授权后，可以使用应用提供的闹钟功能服务。用户可以通过内置的提示音、报时语音及音乐片段组合成为闹铃提醒声音，用户可最多设定 30 个闹钟。本应用将持续优化服务体验，根据实际情况不定期新增功能，相关调整将通过应用内公告等方式向用户告知。</span></p><p>&nbsp;</p><h4 id='一服务内容-2'><span>一、服务内容</span></h4><h5 id='一基础般服务'><span>（一）基础般服务</span></h5><p><span>本应用向所有用户免费提供以下基础服务：</span></p><ol start='' ><li><p><span>2 个基础版闹钟及有限可配置选项；</span></p></li><li><p><span>部分预设铃音、语音和音乐的使用权。</span></p></li></ol><h5 id='二高级版服务'><span>（二）高级版服务</span></h5><p><span>用户通过应用内购买解锁高级版特权，具体如下：</span></p><ol start='' ><li><p><span>用户享有最多 30 个闹钟功能使用权限，以及相关所有可用配置选项的操作权限；</span></p></li><li><p><span>用户获得对应用程序内所有内置铃音的使用授权；</span></p></li><li><p><span>支持家庭共享</span></p></li></ol><p><span>本应用将持续优化服务体验，根据实际情况不定期新增功能，相关调整将通过应用内公告等方式向用户告知。用户在购买高级版前，请充分了解自身需求与使用场景。同时，为保障您顺利享受服务，建议保持Apple账户信息准确有效，以便接收相关通知与服务。</span></p><h5 id='三-购买及退款'><span>（三） 购买及退款</span></h5><ol start='' ><li><p><span>购买价格将在应用内购买页面显著公示，用户可实时查阅。</span></p></li><li><p><span>购买价格可能会根据当地情况随时调整。</span></p></li><li><p><span>用户仅需支付一次即可永久解锁高级版功能，无需续费。</span></p></li><li><p><span>用户可通过Apple 官方退款渠道提交退款申请，本应用将积极配合 Apple 完成相关处理工作。</span></p></li></ol><p>&nbsp;</p><h4 id='二用户责任与义务'><span>二、用户责任与义务</span></h4><h5 id='一合规使用要求'><span>（一）合规使用要求</span></h5><p><span>用户在使用本应用过程中，应遵守相关法律法规及本协议约定。</span></p><h5 id='二违规处理措施'><span>（二）违规处理措施</span></h5><p><span>若发现用户存在违规行为或上传违规内容，本应用有权采取以下措施：</span></p><ol start='' ><li><p><span>向用户发送书面整改通知，并要求用户限期删除违规内容，必要时提供技术协助；</span></p></li><li><p><span>若违规情节严重，本应用有权视情况采取暂停或终止用户服务等处置措施。</span></p></li></ol><p>&nbsp;</p><h4 id='三服务变更'><span>三、服务变更</span></h4><p><span>为提升服务质量，本应用可能进行以下调整：</span></p><ol start='' ><li><p><span>对应用程序的功能模块进行升级或优化。</span></p></li><li><p><span>对服务流程进行简化与优化，如调整闹钟设置界面的交互逻辑，提升用户操作便捷性。</span></p></li><li><p><span>适时新增服务功能。</span></p></li><li><p><span>对用户界面持续进行优化调整以提升用户体验。</span></p></li></ol><p>&nbsp;</p><h4 id='四法律条款'><span>四、法律条款</span></h4><h5 id='一协议适用与争议解决'><span>（一）协议适用与争议解决</span></h5><ol start='' ><li><p><span>本协议适用用户所在国家 / 地区的相关法律法规；</span></p></li><li><p><span>若双方就本协议产生争议，应首先通过友好协商解决；协商不成的，任何一方均可依法向有管辖权的人民法院提起诉讼。</span></p></li></ol><h5 id='二与苹果公司的关系'><span>（二）与苹果公司的关系</span></h5><p><span>根据苹果应用商店相关规定：</span></p><ol start='' ><li><p><span>苹果公司并非本协议的责任主体；</span></p></li><li><p><span>若用户出现严重违约行为，苹果公司有权依据其相关规则采取必要措施。</span></p></li></ol><p>&nbsp;</p><h4 id='五联系与反馈'><span>五、联系与反馈</span></h4><p><span>用户如对本应用或本协议有任何疑问、意见或建议，可通过以下方式联系我们：</span></p><ol start='' ><li><p><span>客服支持：用户可通过电子邮箱 </span><a href='mailto:trifond@outlook.com'><span>trifond@outlook.com</span></a><span> 提交咨询或反馈。</span></p></li><li><p><span>紧急事务处理：如遇需优先处理的紧急事项，用户可在邮件主题行标注【紧急】标识，我们将优先安排专人跟进处理。</span></p></li></ol><p>&nbsp;</p><h4 id='六其他条款'><span>六、其他条款</span></h4><ol start='' ><li><p><span>用户继续使用本应用即视为已接受本协议全部内容；</span></p></li><li><p><span>本协议内容如有变更，将通过应用更新提示等方式通知用户。用户在本协议变更后继续使用本应用的，视为已接受变更后的协议内容。</span></p></li></ol><p>&nbsp;</p><p><span>再次感谢您的信任与支持！如有任何问题，欢迎随时与我们联系。</span></p><p>&nbsp;</p><p><span>更新时间：2025 年 9 月</span></p></div></div>
 </body>
 </html>
